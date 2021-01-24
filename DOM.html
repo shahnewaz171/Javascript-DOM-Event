@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border:2px solid tomato;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Exploring DOM</h1>
+            <article>
+                <h3>article-1</h3>
+                <p class="author" title="I am the most important author" id="bestSeller">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        // var back = document.body.style.backgroundColor = "green";
+        // console.log(back);
+        // // var first = document.getElementById('first');
+        // // first.style.color = 'red';
+        // // first.style.fontSize = '50px';
+        var authors = document.getElementsByClassName('author');
+        // console.log(authors);
+        for( var i =0; i <= authors.length; i++){
+            var element = authors[i];
+            console.log(element.innerHTML);
+            element.innerHTML = 'Lekhok-' + (i + 1);
+            element.setAttribute('title', 'All author is same');
+            console.log(element);
+            element.style.color = 'red';
+        }
+
+
+        // var authors = document.querySelectorAll('.special h3');
+        // for( var i =0; i <= authors.length; i++){
+        //     var element = authors[i];
+        //     // console.log(element.innerHTML);
+        //     element.innerHTML = 'Lekhok-' + (i + 1);
+        //     // console.log(element);
+        // }
+
+        // var set = document.querySelector('h3').setAttribute('title', 'You are the title');
+    </script>
+</body>
+</html>
